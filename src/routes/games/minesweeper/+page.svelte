@@ -43,6 +43,9 @@
   };
 </script>
 
+<svelte:head>
+  <title>GALA｜掃海艇</title>
+</svelte:head>
 <div
   class="select-none p-3 w-fit max-h-full max-w-full bg-gray-400 border-4 border-[#7b7b7b] border-t-white border-l-white mx-auto"
   role="group"
@@ -53,7 +56,12 @@
   <div
     class="h-12 bg-gray-200 flex justify-between items-center p-2 mb-3 border-4 border-[#7b7b7b] border-b-white border-r-white"
   >
-    <select class="w-10" bind:value={difficulty} onchange={resetGrid}>
+    <select
+      class="w-10"
+      bind:value={difficulty}
+      onchange={resetGrid}
+      aria-label="難易度"
+    >
       <option value="easy">易</option>
       <option value="medium">中</option>
       <option value="hard">難</option>

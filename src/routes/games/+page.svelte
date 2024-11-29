@@ -26,6 +26,9 @@
   </a>
 {/snippet}
 
+<svelte:head>
+  <title>GALA｜遊戯一覧</title>
+</svelte:head>
 <div class="p-4 flex flex-wrap gap-4">
   {@render cartridge({
     link: "minesweeper",

@@ -13,5 +13,7 @@
   </a>
   <DarkToggle />
 </header>
-{@render children()}
+<main>
+  {@render children()}
+</main>
 <footer class="text-center text-xs">© GALA 2025</footer>
