@@ -10,10 +10,10 @@
     totalColumns = $derived(parameters[difficulty].column),
     totalRows = $derived(parameters[difficulty].row),
     totalMines = $derived(parameters[difficulty].mines),
-    markCount = $state(0),
-    minesLeft = $derived(totalMines - markCount),
     openCount = $state(0),
     safesLeft = $derived(totalColumns * totalRows - totalMines - openCount),
+    markCount = $state(0),
+    minesLeft = $derived(safesLeft ? totalMines - markCount : 0),
     isGameOver = $state(false);
   const generateMineCoordsEx = () => {
     // alternative: ++ to adjacent tiles, count adjacent mine
