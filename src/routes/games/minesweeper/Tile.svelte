@@ -24,14 +24,14 @@
       8: "#808080",
     },
     tileStyle =
-      "size-6 content-center text-center bg-[#c0c0c0] border-[#7b7b7b]";
+      "size-7 content-center text-center bg-[#c0c0c0] border-[#7b7b7b]";
 </script>
 
 {#snippet openTile(isRedBg)}
   <div
-    class="{tileStyle} border-t-2 border-l-2 font-bold font-mono leading-none"
+    class="{tileStyle} border-t-2 border-l-2 font-bold font-mono leading-none text-xl"
     class:bg-red-600={isRedBg}
-    class:text-xl={!hasMine}
+    class:text-2xl={!hasMine}
     style={!hasMine && icon !== 0 && `color: ${numberColors[icon]};`}
   >
     {#if icon !== 0}{icon}{/if}
@@ -44,7 +44,7 @@
   {:else}
     <button
       {id}
-      class="{tileStyle} border-4 border-t-white border-l-white text-xs"
+      class="{tileStyle} border-4 border-t-white border-l-white text-sm"
       onclick={(e) => {
         if (isGameOver || isOpen) return;
         if (isMarked) {
