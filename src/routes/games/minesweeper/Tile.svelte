@@ -44,7 +44,8 @@
   {:else}
     <button
       {id}
-      class="{tileStyle} border-4 border-t-white border-l-white text-sm"
+      class="{tileStyle} border-4 border-t-white border-l-white text-sm {isMarked &&
+        'bg-[#a0a0a0]'}"
       onclick={(e) => {
         if (isGameOver || isOpen) return;
         if (isMarked) {
