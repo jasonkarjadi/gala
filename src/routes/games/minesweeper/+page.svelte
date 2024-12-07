@@ -57,7 +57,7 @@
     class="h-12 bg-gray-200 flex justify-between items-center p-2 mb-3 border-4 border-[#7b7b7b] border-b-white border-r-white"
   >
     <select
-      class="w-10"
+      class="w-12 border-2 border-[#7b7b7b] border-b-white border-r-white"
       bind:value={difficulty}
       onchange={resetGrid}
       aria-label="難易度"
@@ -66,10 +66,15 @@
       <option value="medium">中</option>
       <option value="hard">難</option>
     </select>
-    <button class="border-4 border-white px-1" onclick={resetGrid}>
-      {!isGameOver ? ":)" : !safesLeft ? ":D" : ":("}
+    <button
+      class="border-4 border-[#7b7b7b] border-t-white border-l-white px-2 font-bold active:border-[#7b7b7b]"
+      onclick={resetGrid}
+    >
+      <span class="inline-block rotate-90">
+        {!isGameOver ? ":)" : !safesLeft ? ":D" : ":("}
+      </span>
     </button>
-    <div class="w-10 text-right font-mono">
+    <div class="w-12 text-right font-mono text-2xl">
       {minesLeft.toString().padStart(2, "0")}
     </div>
   </div>
