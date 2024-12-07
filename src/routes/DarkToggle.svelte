@@ -11,6 +11,7 @@
 </script>
 
 <button
+  class="hover:bg-slate-300 rounded-full p-1.5 pl-1 pb-1 dark:text-slate-100 dark:hover:bg-slate-500"
   onclick={() => {
     document.getElementsByTagName("html")[0].classList.toggle("dark");
     isDark = !isDark;
